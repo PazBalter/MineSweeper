@@ -1,46 +1,58 @@
 
 function printMat(mat, selector) {
-    var strHTML = '<table border="0"><tbody>';
+    var strHTML = '<table border="1"><tbody>';
     for (var i = 0; i < mat.length; i++) {
       strHTML += '<tr>';
       for (var j = 0; j < mat[0].length; j++) {
         var cell = mat[i][j];
         var className = 'cell cell' + i + '-' + j;
-        strHTML += '<td class="' + className + '"> ' + cell + ' </td>'
+        strHTML += '<td> <button oncontextmenu="cellMarked(this,'+gBoard[i][j].id+')" onclick="cellClicked('+gBoard[i][j].id+','+i+','+j+')"class="'
+        + className + '" id="'+gBoard[i][j].id +'"> ' +cell + '</td>'
       }
       strHTML += '</tr>'
     }
     strHTML += '</tbody></table>';
+
     var elContainer = document.querySelector(selector);
     elContainer.innerHTML = strHTML;
-  }
-  
-  // location such as: {i: 2, j: 7}
-  function renderCell(location, value) {
-    // Select the elCell and set the value
-    var elCell = document.querySelector(`.cell${location.i}-${location.j}`);
-    elCell.innerHTML = value;
-  }
-  
-  function getRandomIntInt(min, max) {
+}
+function buildBoard(){
+    var board = [];
+    for(var i = 0 ; i < gLevel.SIZE ; i++){
+        board.push([]);
+        for (var j = 0; j < gLevel.SIZE; j++) {
+            board[i][j] = createCell(gBoard)
+        }
+    }
+    return board;
+}
+
+function getRandomIntInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
-  }
+}
   
-  function unHide() {
-    gResMenu.style.display = 'block'
-  }
+function unHide() {
+    var elDecision = document.getElementById("gameDecision");
+    
+    elDecision.style.display = 'block'
+    
+}
   
-  function hide() {
-    gResMenu.style.display = 'none'
-  }
+function hide() {
+    var elDecision = document.getElementById("gameDecision"); 
+    elDecision.style.display = 'none'
+}
   
-  function getRandomColor() {
+function getRandomColor() {
     var letters = '0123456789ABCDEF';
     var color = '#';
     for (var i = 0; i < 6; i++) {
         color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
-  }
-  
-  
+}
+function getRandomIntInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+

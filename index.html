@@ -6,15 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mine sweeper</title>
     <link rel="stylesheet" href="css/app.css">
-    <div><button class="restartBtn" onclick="init()">😄</button></div>
+    <div>
+      <button class="restartBtn" onclick="initGame()">😄</button>
+    </div>
 </head>
 <body onload="initGame()">
    
-    <h2><span>00:00</span></h2>
+  <time id="timer">0</time>
+    
     <div class="board-container"></div>
-      <div id="restartMenu" class="restartMenu">
-        <h2 id="gameDecision"></h2>
+        
+          <h3><button id="easy" onclick="changeDifficulty(1)">Easy</button>
+            <button id="medium" onclick="changeDifficulty(2)">Medium</button>
+            <button id="hard" onclick="changeDifficulty(3)">Hard</button></h3>
+            <h2 id="gameDecision"> </h2>
       </div>
+     
     <script src="js/game.js"></script>
+    <script src="js/util.js"></script>
 </body>
 </html>
+
+
+<!-- onmousedown="WhichButton(event) -->

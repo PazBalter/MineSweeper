@@ -1,8 +1,8 @@
 body {
     display: inline-block;
     /* margin: auto; */
-    background-color: gray;
-    color: whitesmoke ;
+    background-color: rgb(126, 123, 118);
+    color: black ;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,6 +14,7 @@ body {
 
 
 .cell {
+  background-color:  whitesmoke;
     width: 40px;
     height: 40px;
     text-align: center;
@@ -24,3 +25,7 @@ body {
       width: 60px;
     background-color: gray; 
   }
+
+#gameDecision{
+  display: none;
+}
