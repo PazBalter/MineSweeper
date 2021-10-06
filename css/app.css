@@ -1,6 +1,6 @@
 body {
-    display: inline-block;
-    /* margin: auto; */
+   
+    margin: auto;
     background-color: rgb(126, 123, 118);
     color: black ;
     display: flex;
@@ -10,22 +10,67 @@ body {
     text-align: center;
     min-height: 100vh;
     
-  }
+}
 
 
 .cell {
+  border-color: rgb(126, 123, 118);
+  border: 20px;
   background-color:  whitesmoke;
     width: 40px;
     height: 40px;
     text-align: center;
     font-size: 1.5em;
-  }
-  .restartBtn{
-      height: 45px;
-      width: 60px;
-    background-color: gray; 
-  }
+}
+
+#restartBtn{
+  border-color: black;
+  height: 45px;
+  width: 60px;
+  background-color: rgb(28, 128, 19);; 
+}
 
 #gameDecision{
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 100;
   display: none;
 }
+.board-container{
+  position: static;
+}
+img{
+  height: 30px;
+  width: 30px;
+}
+#livesScore{
+
+  font-size: 25px;
+  font-style: italic;
+  font-weight: 100;
+
+}
+#theGame{
+  border-radius: 25px;
+  width: 350px;
+  margin: auto;
+  background-color: rgba(31, 133, 22, 0.808);
+  color: black ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 90vh;
+}
+#timer{
+
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.856);
+  color: red;
+  font-size: 25px;
+  font-weight: 100;
+  width: 100px;
+  height: 30px;
+}
+

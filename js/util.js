@@ -6,7 +6,7 @@ function printMat(mat, selector) {
       for (var j = 0; j < mat[0].length; j++) {
         var cell = mat[i][j];
         var className = 'cell cell' + i + '-' + j;
-        strHTML += '<td> <button oncontextmenu="cellMarked(this,'+gBoard[i][j].id+')" onclick="cellClicked('+gBoard[i][j].id+','+i+','+j+')"class="'
+        strHTML += '<td> <button oncontextmenu="cellMarked('+gBoard[i][j].id+')" onclick="cellClicked('+gBoard[i][j].id+','+i+','+j+')"class="'
         + className + '" id="'+gBoard[i][j].id +'"> ' +cell + '</td>'
       }
       strHTML += '</tr>'
