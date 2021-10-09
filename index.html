@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mine sweeper</title>
-    <link rel="stylesheet" href="css/app.css">
   
-   
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mine sweeper</title>
+  <link rel="stylesheet" href="css/app.css">
 </head>
 
 <body style="background-image: url('img/greenM.jpg');" onload="initGame()">
@@ -15,25 +14,25 @@
   <div id="theGame">
     <button id="restartBtn" onclick="initGame()">😄</button>
   
-  <h2 id="livesScore">'LIVES LEFT:❤️❤️❤️'</h2>
+  <h2 id="livesScore"></h2>
   <time id="timer">0</time>
     
     <div class="board-container"></div>
         
-      <h2>
-        <button id="easy" onclick="changeDifficulty(1)">Easy</button>
-        <button id="medium" onclick="changeDifficulty(2)">Medium</button>
-        <button id="hard" onclick="changeDifficulty(3)">Hard</button>
-      </h2> 
-        
-      <h2 id="gameDecision"> </h2>   
-  </div>
+    <h2>
+      <button id="easy" onclick="changeDifficulty(1)">Easy</button>
+      <button id="medium" onclick="changeDifficulty(2)">Medium</button>
+      <button id="hard" onclick="changeDifficulty(3)">Hard</button>
+    </h2> 
+    <div id="gameDecision"></div> 
+  </div>    
 
-    <canvas id="movie" style="position: fixed; top: 0; left: 0;"></canvas>
+  <footer>
+    <p>Game by: Paz Balter<br>
+  </footer>
 
-    <script type ="text/javascript" src ="./js/script.js"></script>  
-    <script src="js/game.js"></script>
-    <script src="js/util.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/util.js"></script>
 </body>
 </html>
 
